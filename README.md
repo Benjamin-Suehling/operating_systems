@@ -1,2 +1,2 @@
 # operating_systems
-Additional material for the lecture "Operating Systems" at LMU Munich
+This repository contains additional material I created for tutorials in the course [Operating Systems](http://www.mobile.ifi.lmu.de/lehrveranstaltungen/bs-ws2122/).
