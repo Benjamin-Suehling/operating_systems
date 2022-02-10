@@ -1,0 +1,29 @@
+% Kompiliert mit XeLaTex
+
+\documentclass[a4paper, 11pt, fleqn]{article}
+
+\usepackage{array}
+\usepackage[ngerman]{babel}
+\usepackage{enumitem}
+\usepackage{fontspec}
+\usepackage[left=3cm, right=2.5cm, top=2.5cm, bottom=2cm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{xcolor}
+
+\begin{document}
+
+
+\section*{\begin{center}Threads in Java -- Zusatzaufgabe\end{center}}
+
+Im Folgenden soll der Einkauf in einem Supermarkt modelliert werden. Im Supermarkt arbeitet (neben dem Kassierer) ein Mitarbeiter und es kaufen mehrere Kunden ein. Der Mitarbeiter ist durchgehend damit beschäftigt, eines der Regale, welche durchnummeriert sind, einzuräumen. Ein Kunde möchte zu Beginn natürlich den Supermarkt betreten. Aufgrund von Corona-Beschränkungen darf sich allerdings zu jedem Zeitpunkt nur eine bestimmte Anzahl an Kunden im Supermarkt befinden. Hat ein Kunde den Supermarkt betreten, so kauft er eine bestimmte Anzahl an Artikeln. Hierfür schaut er für jeden Artikel einzeln auf seinen Einkaufszettel und geht dann zu dem Regal, in dem dieser Artikel gefunden werden kann. Hat ein Kunde alle Artikel zusammen, so stellt er sich an die Kasse an. Nach dem Bezahlen verlässt er den Supermarkt wieder. Aus Rücksicht vor den Abstandsregelungen darf sich außerdem zu jedem Zeitpunkt an jedem Regal nur höchstens eine Person befinden, egal ob dies der Mitarbeiter oder ein Kunde ist.\\[2ex]
+Der beschiebene Ablauf soll nun mittels Threads in Java nachgestellt werden. Die Klassen \texttt{Simulation}, \texttt{Kunde} und \texttt{Mitarbeiter} sind bereits beispielhaft implementiert. Alle Teilaufgaben beziehen sich auf den Code-Rahmen der Klasse Supermarkt. Teilaufgabe e) ist ein wenig schwieriger als die bisherigen Übungsaufgaben zu Threads in Java.
+\begin{enumerate}[label=\alph*)]
+\item Vervollständigen Sie den Konstruktor, sodass alle deklarierten Instanzvariablen mit dem korrekten Wert initialisiert werden.
+\item Implementieren Sie die Methode \texttt{supermarktBetreten(int id)}, sodass sich zu jeder Zeit höchstens maxKunden im Supermarkt aufhalten. Es ist hierbei nicht wichtig, in welcher Reihenfolge wartende Personen den Supermarkt betreten.
+\item Implementieren Sie die Methode \texttt{vorRegalStellen(int id, int regalnummer)}, welche sicherstellen soll, dass eine Person sich nur vor ein Regal stellen darf, wenn sich hier noch keine andere Person befindet. Zur Vereinfachung soll davon ausgegangen werden, dass sich immer genug Waren im Regal befinden -- das muss also nicht extra überprüft werden.
+\item  Implementieren Sie die Methode \texttt{regalVerlassen(int id, int regalnummer)}, welche signalisiert, dass eine Person ein bestimmtes Regal verlässt.
+\item Implementieren Sie zum Abschluss die beiden Methoden \texttt{anKasseAnstellen(int id)} und \texttt{supermarktVerlassen(int id)}. Achten Sie darauf, dass Kunden stets in der Reihenfolge bezahlen sollen, in der sie sich an der Kasse angestellt haben.
+\end{enumerate}
+
+\end{document}
+
